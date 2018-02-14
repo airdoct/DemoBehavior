@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:sii="https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd" xmlns:siiLRRC="https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/RespuestaConsultaLR.xsd" elementFormDefault="qualified" targetNamespace="https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/RespuestaConsultaLR.xsd" xmlns="http://www.w3.org/2001/XMLSchema">
+  <import schemaLocation="SuministroInformacion.xsd" namespace="https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd" />
+  <element name="RespuestaConsultaLRFacturasRecibidas" type="siiLRRC:RespuestaConsultaLRFacturasRecibidasType">
+    <annotation>
+      <documentation>Servicio de consulta de Facturas Recibidas</documentation>
+    </annotation>
+  </element>
+  <element name="RespuestaConsultaLRFacturasEmitidas" type="siiLRRC:RespuestaConsultaLRFacturasEmitidasType">
+    <annotation>
+      <documentation>Servicio de consulta de Facturas Emitidas</documentation>
+    </annotation>
+  </element>
+  <element name="RespuestaConsultaLRBienesInversion" type="siiLRRC:RespuestaConsultaLRBienesInversionType">
+    <annotation>
+      <documentation>Servicio de consulta de Bienes de Inversion</documentation>
+    </annotation>
+  </element>
+  <element name="RespuestaConsultaLRDetOperIntracomunitarias" type="siiLRRC:RespuestaConsultaLRDetOperIntracomunitariasType">
+    <annotation>
+      <documentation>Servicio de consulta de Determinadas Operaciones Intracomunitarias</documentation>
+    </annotation>
+  </element>
+  <element name="RespuestaConsultaLRCobrosMetalico" type="siiLRRC:RespuestaConsultaLRCobrosMetalicoType">
+    <annotation>
+      <documentation>Servicio de consulta de Cobros en Met??lico</documentation>
+    </annotation>
+  </element>
+  <element name="RespuestaConsultaLRAgenciasViajes" type="siiLRRC:RespuestaConsultaLRAgenciasViajesType">
+    <annotation>
+      <documentation>Servicio de consulta de Agencias Viajes</documentation>
+    </annotation>
+  </element>
+  <element name="RespuestaConsultaLROperacionesSeguros" type="siiLRRC:RespuestaConsultaLROperacionesSegurosType">
+    <annotation>
+      <documentation>Servicio de consulta de OperacionesSeguros</documentation>
+    </annotation>
+  </element>
+  <element name="RespuestaConsultaCobros" type="siiLRRC:RespuestaConsultaCobrosType">
+    <annotation>
+      <documentation>Servicio de consulta Cobros de Facturas Emitidas</documentation>
+    </annotation>
+  </element>
+  <element name="RespuestaConsultaPagos" type="siiLRRC:RespuestaConsultaPagosType">
+    <annotation>
+      <documentation>Servicio de consulta Pagos de Facturas Emitidas</documentation>
+    </annotation>
+  </element>
+  <complexType name="RespuestaConsultaLRFacturasEmitidasType">
+    <complexContent mixed="false">
+      <extension base="siiLRRC:RespuestaConsultaLRFacturasType">
+        <sequence>
+          <element minOccurs="0" maxOccurs="10000" name="RegistroRespuestaConsultaLRFacturasEmitidas" type="siiLRRC:RegistroRespuestaConsultaEmitidasType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RespuestaConsultaLRFacturasRecibidasType">
+    <complexContent mixed="false">
+      <extension base="siiLRRC:RespuestaConsultaLRFacturasType">
+        <sequence>
+          <element minOccurs="0" maxOccurs="10000" name="RegistroRespuestaConsultaLRFacturasRecibidas" type="siiLRRC:RegistroRespuestaConsultaRecibidasType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RespuestaConsultaLRBienesInversionType">
+    <complexContent mixed="false">
+      <extension base="siiLRRC:RespuestaConsultaLRFacturasType">
+        <sequence>
+          <element minOccurs="0" maxOccurs="10000" name="RegistroRespuestaConsultaLRBienesInversion" type="siiLRRC:RegistroRespuestaConsultaBienesType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RespuestaConsultaLRDetOperIntracomunitariasType">
+    <complexContent mixed="false">
+      <extension base="siiLRRC:RespuestaConsultaLRFacturasType">
+        <sequence>
+          <element minOccurs="0" maxOccurs="10000" name="RegistroRespuestaConsultaLRDetOperIntracomunitarias" type="siiLRRC:RegistroRespuestaConsultaDetOperIntracomunitariasType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RespuestaConsultaLRCobrosMetalicoType">
+    <complexContent mixed="false">
+      <extension base="siiLRRC:RespuestaConsultaLRFacturasType">
+        <sequence>
+          <element minOccurs="0" maxOccurs="10000" name="RegistroRespuestaConsultaLRCobrosMetalico" type="siiLRRC:RegistroRespuestaConsultaCobrosMetalicoType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RespuestaConsultaLRAgenciasViajesType">
+    <complexContent mixed="false">
+      <extension base="siiLRRC:RespuestaConsultaLRFacturasType">
+        <sequence>
+          <element minOccurs="0" maxOccurs="10000" name="RegistroRespuestaConsultaLRAgenciasViajes" type="siiLRRC:RegistroRespuestaConsultaAgenciasViajesType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RespuestaConsultaLROperacionesSegurosType">
+    <complexContent mixed="false">
+      <extension base="siiLRRC:RespuestaConsultaLRFacturasType">
+        <sequence>
+          <element minOccurs="0" maxOccurs="10000" name="RegistroRespuestaConsultaLROperacionesSeguros" type="siiLRRC:RegistroRespuestaConsultaOperacionesSegurosType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RespuestaConsultaCobrosType">
+    <complexContent mixed="false">
+      <extension base="siiLRRC:RespuestaConsultaFacturaCobrosType">
+        <sequence>
+          <element minOccurs="0" maxOccurs="10000" name="RegistroRespuestaConsultaCobros" type="siiLRRC:RegistroRespuestaConsultaCobrosType" />
+          <element minOccurs="0" maxOccurs="1" name="ClavePaginacion" type="double" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RespuestaConsultaPagosType">
+    <complexContent mixed="false">
+      <extension base="siiLRRC:RespuestaConsultaFacturaPagosType">
+        <sequence>
+          <element minOccurs="0" maxOccurs="10000" name="RegistroRespuestaConsultaPagos" type="siiLRRC:RegistroRespuestaConsultaPagosType" />
+          <element minOccurs="0" maxOccurs="1" name="ClavePaginacion" type="double" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TitularPeriodoType">
+    <sequence>
+      <element name="Cabecera" type="sii:ConsultaInformacion">
+        <annotation>
+          <documentation xml:lang="es"> Titular de los libros de registro que suministra la informaci??n </documentation>
+        </annotation>
+      </element>
+      <element name="PeriodoImpositivo">
+        <complexType>
+          <annotation>
+            <documentation xml:lang="es"> Per??odo al que corresponden los apuntes. todos los apuntes deben corresponder al mismo per??odo impositivo </documentation>
+          </annotation>
+          <sequence>
+            <element name="Ejercicio" type="sii:YearType" />
+            <element name="Periodo" type="sii:TipoPeriodoType" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IndicadorPaginacion" type="siiLRRC:IndicadorPaginacionType" />
+      <element name="ResultadoConsulta" type="siiLRRC:ResultadoConsultaType" />
+    </sequence>
+  </complexType>
+  <complexType name="EstadoFacturaType">
+    <sequence>
+      <element minOccurs="0" name="EstadoCuadre" type="sii:EstadoCuadreType" />
+      <element minOccurs="0" name="TimestampEstadoCuadre" type="sii:Timestamp" />
+      <element name="TimestampUltimaModificacion" type="sii:Timestamp" />
+      <element name="EstadoRegistro" type="siiLRRC:EstadoRegistroSIIType">
+        <annotation>
+          <documentation xml:lang="es"> 
+						Estado del registro almacenado en SII. Los estados posibles son: Correcta, AceptadaConErrores y Anulada
+											</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="CodigoErrorRegistro" type="siiLRRC:ErrorDetalleType">
+        <annotation>
+          <documentation xml:lang="es"> 
+						C??digo del error de registro, en su caso.
+					</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="DescripcionErrorRegistro" type="sii:TextMax500Type">
+        <annotation>
+          <documentation xml:lang="es"> 
+						Descripci??n detallada del error de registro, en su caso.
+					</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="DatosDescuadreContraparteType">
+    <sequence>
+      <element minOccurs="0" name="SumBaseImponibleISP" type="sii:ImporteSgn14.2Type" />
+      <element minOccurs="0" name="SumBaseImponible" type="sii:ImporteSgn14.2Type" />
+      <element minOccurs="0" name="SumCuota" type="sii:ImporteSgn14.2Type" />
+      <element minOccurs="0" name="SumCuotaRecargoEquivalencia" type="sii:ImporteSgn14.2Type" />
+      <element minOccurs="0" name="ImporteTotal" type="sii:ImporteSgn12.2Type" />
+    </sequence>
+  </complexType>
+  <complexType name="EstadoFactura2Type">
+    <sequence>
+      <element name="TimestampUltimaModificacion" type="sii:Timestamp" />
+      <element name="EstadoRegistro" type="siiLRRC:EstadoRegistroSIIType">
+        <annotation>
+          <documentation xml:lang="es"> 
+						Estado del registro almacenado en SII 
+											</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="CodigoErrorRegistro" type="siiLRRC:ErrorDetalleType">
+        <annotation>
+          <documentation xml:lang="es"> 
+						C??digo del error de registro, en su caso.
+					</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="DescripcionErrorRegistro" type="sii:TextMax500Type">
+        <annotation>
+          <documentation xml:lang="es"> 
+						Descripci??n detallada del error de registro, en su caso.
+					</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="RegistroRespuestaConsultaEmitidasType">
+    <sequence>
+      <element name="IDFactura" type="sii:IDFacturaExpedidaType" />
+      <element name="DatosFacturaEmitida" type="siiLRRC:FacturaRespuestaExpedidaType" />
+      <element name="DatosPresentacion" type="sii:DatosPresentacion2Type" />
+      <element name="EstadoFactura" type="siiLRRC:EstadoFacturaType" />
+      <element minOccurs="0" name="DatosDescuadreContraparte" type="siiLRRC:DatosDescuadreContraparteType" />
+    </sequence>
+  </complexType>
+  <complexType name="RegistroRespuestaConsultaRecibidasType">
+    <sequence>
+      <element name="IDFactura" type="sii:IDFacturaRecibidaType" />
+      <element name="DatosFacturaRecibida" type="siiLRRC:FacturaRespuestaRecibidaType" />
+      <element name="DatosPresentacion" type="sii:DatosPresentacion2Type" />
+      <element name="EstadoFactura" type="siiLRRC:EstadoFacturaType" />
+      <element minOccurs="0" name="DatosDescuadreContraparte" type="siiLRRC:DatosDescuadreContraparteType" />
+    </sequence>
+  </complexType>
+  <complexType name="RegistroRespuestaConsultaBienesType">
+    <sequence>
+      <element name="IDFactura" type="sii:IDFacturaComunitariaType" />
+      <element name="DatosBienInversion" type="sii:BienDeInversionType" />
+      <element name="DatosPresentacion" type="sii:DatosPresentacion2Type" />
+      <element name="EstadoFactura" type="siiLRRC:EstadoFactura2Type" />
+    </sequence>
+  </complexType>
+  <complexType name="RegistroRespuestaConsultaDetOperIntracomunitariasType">
+    <sequence>
+      <element name="IDFactura" type="sii:IDFacturaComunitariaType" />
+      <element name="DatosDetOperIntracomunitarias" type="siiLRRC:RespuestaDetOperIntracomunitariaType" />
+      <element name="DatosPresentacion" type="sii:DatosPresentacion2Type" />
+      <element name="EstadoFactura" type="siiLRRC:EstadoFactura2Type" />
+    </sequence>
+  </complexType>
+  <complexType name="RegistroRespuestaConsultaCobrosMetalicoType">
+    <sequence>
+      <element name="DatosCobroMetalico" type="siiLRRC:RespuestaCobrosMetalicoType" />
+      <element name="DatosPresentacion" type="sii:DatosPresentacion2Type" />
+      <element name="EstadoCobroMetalico" type="siiLRRC:EstadoFactura2Type" />
+    </sequence>
+  </complexType>
+  <complexType name="RegistroRespuestaConsultaAgenciasViajesType">
+    <sequence>
+      <element name="DatosAgenciasViajes" type="siiLRRC:RespuestaCobrosMetalicoType" />
+      <element name="DatosPresentacion" type="sii:DatosPresentacion2Type" />
+      <element name="EstadoAgenciasViajes" type="siiLRRC:EstadoFactura2Type" />
+    </sequence>
+  </complexType>
+  <complexType name="RegistroRespuestaConsultaOperacionesSegurosType">
+    <sequence>
+      <element name="DatosOperacionesSeguros" type="siiLRRC:RespuestaOperacionesSegurosType" />
+      <element name="DatosPresentacion" type="sii:DatosPresentacion2Type" />
+      <element name="EstadoOperacionesSeguros" type="siiLRRC:EstadoFactura2Type" />
+    </sequence>
+  </complexType>
+  <complexType name="RegistroRespuestaConsultaCobrosType">
+    <sequence>
+      <element name="DatosCobro" type="sii:DatosPagoCobroType" />
+      <element name="DatosPresentacion" type="sii:DatosPresentacion2Type" />
+    </sequence>
+  </complexType>
+  <complexType name="RegistroRespuestaConsultaPagosType">
+    <sequence>
+      <element name="DatosPago" type="sii:DatosPagoCobroType" />
+      <element name="DatosPresentacion" type="sii:DatosPresentacion2Type" />
+    </sequence>
+  </complexType>
+  <complexType name="RespuestaDetOperIntracomunitariaType">
+    <sequence>
+      <element name="Contraparte" type="sii:PersonaFisicaJuridicaType" />
+      <element name="DetOperIntracomunitarias" type="sii:OperacionIntracomunitariaType" />
+    </sequence>
+  </complexType>
+  <complexType name="RespuestaCobrosMetalicoType">
+    <sequence>
+      <element name="Contraparte" type="sii:PersonaFisicaJuridicaType" />
+      <element name="ImporteTotal" type="sii:ImporteSgn12.2Type" />
+    </sequence>
+  </complexType>
+  <complexType name="RespuestaOperacionesSegurosType">
+    <sequence>
+      <element name="Contraparte" type="sii:PersonaFisicaJuridicaType" />
+      <element name="ClaveOperacion" type="sii:ClaveOperacionType" />
+      <element name="ImporteTotal" type="sii:ImporteSgn12.2Type" />
+    </sequence>
+  </complexType>
+  <complexType name="RespuestaConsultaLRFacturasType">
+    <complexContent mixed="false">
+      <extension base="sii:ConsultaInformacion">
+        <sequence>
+          <element name="PeriodoImpositivo">
+            <complexType>
+              <annotation>
+                <documentation xml:lang="es"> Per??odo al que corresponden los apuntes. todos los apuntes deben corresponder al mismo per??odo impositivo </documentation>
+              </annotation>
+              <sequence>
+                <element name="Ejercicio" type="sii:YearType" />
+                <element name="Periodo" type="sii:TipoPeriodoType" />
+              </sequence>
+            </complexType>
+          </element>
+          <element name="IndicadorPaginacion" type="siiLRRC:IndicadorPaginacionType" />
+          <element name="ResultadoConsulta" type="siiLRRC:ResultadoConsultaType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RespuestaConsultaFacturaCobrosType">
+    <complexContent mixed="false">
+      <extension base="sii:ConsultaInformacion">
+        <sequence>
+          <element name="IDFactura" type="sii:IDFacturaExpedidaBCType" />
+          <element name="IndicadorPaginacion" type="siiLRRC:IndicadorPaginacionType" />
+          <element name="ResultadoConsulta" type="siiLRRC:ResultadoConsultaType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RespuestaConsultaFacturaPagosType">
+    <complexContent mixed="false">
+      <extension base="sii:ConsultaInformacion">
+        <sequence>
+          <element name="IDFactura" type="sii:IDFacturaRecibidaNombreBCType" />
+          <element name="IndicadorPaginacion" type="siiLRRC:IndicadorPaginacionType" />
+          <element name="ResultadoConsulta" type="siiLRRC:ResultadoConsultaType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FacturaRespuestaType">
+    <annotation>
+      <documentation xml:lang="es"> Datos comunes de facturas emitidas y recibidas </documentation>
+    </annotation>
+    <sequence>
+      <element name="TipoFactura" type="sii:ClaveTipoFacturaType">
+        <annotation>
+          <documentation xml:lang="es"> Clave del tipo de factura </documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="TipoRectificativa" type="sii:ClaveTipoRectificativaType">
+        <annotation>
+          <documentation xml:lang="es"> Clave del tipo de factura </documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="FacturasAgrupadas">
+        <complexType>
+          <annotation>
+            <documentation xml:lang="es">El ID de los tickets agrupados, ??nicamente se rellena en el caso de agrupaci??n de tickets en factura</documentation>
+          </annotation>
+          <sequence>
+            <element maxOccurs="unbounded" name="IDFacturaAgrupada" type="sii:IDFacturaARType" />
+          </sequence>
+        </complexType>
+      </element>
+      <element minOccurs="0" name="FacturasRectificadas">
+        <complexType>
+          <annotation>
+            <documentation xml:lang="es">El ID de las facturas rectificadas, ??nicamente se rellena en el caso de rectificaci??n de facturas</documentation>
+          </annotation>
+          <sequence>
+            <element maxOccurs="unbounded" name="IDFacturaRectificada" type="sii:IDFacturaARType" />
+          </sequence>
+        </complexType>
+      </element>
+      <element minOccurs="0" name="ImporteRectificacion" type="sii:DesgloseRectificacionType" />
+      <element minOccurs="0" name="FechaOperacion" type="sii:fecha" />
+      <element name="ClaveRegimenEspecialOTrascendencia" type="sii:IdOperacionesTrascendenciaTributariaType" />
+      <element minOccurs="0" name="ClaveRegimenEspecialOTrascendenciaAdicional1" type="sii:IdOperacionesTrascendenciaTributariaType" />
+      <element minOccurs="0" name="ClaveRegimenEspecialOTrascendenciaAdicional2" type="sii:IdOperacionesTrascendenciaTributariaType" />
+      <element minOccurs="0" name="NumRegistroAcuerdoFacturacion" type="sii:TextMax15Type" />
+      <element minOccurs="0" name="ImporteTotal" type="sii:ImporteSgn12.2Type" />
+      <element minOccurs="0" name="BaseImponibleACoste" type="sii:ImporteSgn12.2Type" />
+      <element name="DescripcionOperacion" type="sii:TextMax500Type" />
+    </sequence>
+  </complexType>
+  <complexType name="FacturaRespuestaExpedidaType">
+    <annotation>
+      <documentation xml:lang="es"> Apunte correspondiente al libro de facturas expedidas. </documentation>
+    </annotation>
+    <complexContent mixed="false">
+      <extension base="siiLRRC:FacturaRespuestaType">
+        <sequence>
+          <element minOccurs="0" name="DatosInmueble">
+            <complexType>
+              <annotation>
+                <documentation xml:lang="es">Desglose de inmuebles</documentation>
+              </annotation>
+              <sequence>
+                <element maxOccurs="15" name="DetalleInmueble" type="sii:DatosInmuebleType" />
+              </sequence>
+            </complexType>
+          </element>
+          <element minOccurs="0" name="ImporteTransmisionSujetoAIVA" type="sii:ImporteSgn12.2Type" />
+          <element minOccurs="0" name="EmitidaPorTerceros" type="sii:EmitidaPorTercerosType" />
+          <element minOccurs="0" name="VariosDestinatarios" type="sii:VariosDestinatariosType" />
+          <element minOccurs="0" name="Cupon" type="sii:CuponType" />
+          <element minOccurs="0" name="Contraparte" type="sii:PersonaFisicaJuridicaType">
+            <annotation>
+              <documentation xml:lang="es"> Contraparte de la operaci??n. Cliente (Opcional en tiquets) en facturas emitidas. </documentation>
+            </annotation>
+          </element>
+          <element name="TipoDesglose">
+            <complexType>
+              <choice>
+                <element name="DesgloseFactura" type="sii:TipoSinDesgloseType" />
+                <element name="DesgloseTipoOperacion" type="sii:TipoConDesgloseType" />
+              </choice>
+            </complexType>
+          </element>
+          <element name="Cobros" type="siiLRRC:FacturaARType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FacturaRespuestaRecibidaType">
+    <annotation>
+      <documentation xml:lang="es"> Apunte correspondiente al libro de facturas recibidas. </documentation>
+    </annotation>
+    <complexContent mixed="false">
+      <extension base="siiLRRC:FacturaRespuestaType">
+        <sequence>
+          <element name="DesgloseFactura" type="sii:DesgloseFacturaRecibidasType" />
+          <element name="Contraparte" type="sii:PersonaFisicaJuridicaType">
+            <annotation>
+              <documentation xml:lang="es"> Contraparte de la operaci??n. Proveedor (Obligatorio) en facturas recibidas. </documentation>
+            </annotation>
+          </element>
+          <element name="FechaRegContable" type="sii:fecha" />
+          <element name="CuotaDeducible" type="sii:ImporteSgn12.2Type" />
+          <element name="Pagos" type="siiLRRC:FacturaARType" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <simpleType name="IndicadorPaginacionType">
+    <restriction base="string">
+      <enumeration value="S" />
+      <enumeration value="N" />
+    </restriction>
+  </simpleType>
+  <simpleType name="ResultadoConsultaType">
+    <restriction base="string">
+      <enumeration value="ConDatos" />
+      <enumeration value="SinDatos" />
+    </restriction>
+  </simpleType>
+  <simpleType name="ErrorDetalleType">
+    <restriction base="integer" />
+  </simpleType>
+  <simpleType name="FacturaARType">
+    <restriction base="string">
+      <enumeration value="S" />
+      <enumeration value="N" />
+    </restriction>
+  </simpleType>
+  <simpleType name="EstadoRegistroSIIType">
+    <restriction base="string">
+      <enumeration value="Correcta">
+        <annotation>
+          <documentation xml:lang="es">El registro se almacenado sin errores</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="AceptadaConErrores">
+        <annotation>
+          <documentation xml:lang="es">El registro se almacenado tiene algunos errores. Ver detalle del error</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="Anulada">
+        <annotation>
+          <documentation xml:lang="es">El registro almacenado ha sido anulado</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+</schema>
